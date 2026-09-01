@@ -2,66 +2,36 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>MJM TECH - Mi QR Negocio v2</title>
+<title>MJM TECH - Mi QR Negocio v3</title>
 <style>
-body{margin:0;background:#090909;color:#fff;font-family:Arial}
-.login{height:100vh;display:flex;align-items:center;justify-content:center}
-.box,.card{background:#171717;border-radius:18px;padding:25px}
-input{display:block;width:260px;padding:12px;margin:10px 0;background:#222;border:1px solid #555;color:white;border-radius:8px}
-button{background:#f5a400;border:0;padding:12px 25px;border-radius:10px;font-weight:bold}
-.hidden{display:none}
-.sidebar{position:fixed;width:220px;height:100%;background:#121212;padding:20px}
-.main{margin-left:260px;padding:30px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+body{margin:0;background:#080808;color:#fff;font-family:Arial}
+nav{position:fixed;width:220px;height:100vh;background:#151515;padding:20px}
+main{margin-left:260px;padding:30px}
+.card{background:#1c1c1c;border-radius:16px;padding:20px;margin:15px 0}
+button{background:#f5a400;border:0;padding:12px 20px;border-radius:10px}
 </style>
 </head>
 <body>
-
-<div id="login" class="login">
-<div class="box">
-<h1 style="color:#f5a400">MJM TECH</h1>
-<h3>Mi QR Negocio</h3>
-<input id="user" placeholder="Usuario">
-<input id="pass" type="password" placeholder="Contraseña">
-<button onclick="entrar()">Ingresar</button>
-</div>
-</div>
-
-<div id="panel" class="hidden">
-<div class="sidebar">
-<h2>MJM TECH</h2>
+<nav>
+<h2 style="color:#f5a400">MJM TECH</h2>
+<p>Mi QR Negocio</p>
 <p>📊 Dashboard</p>
-<p>🔳 Mis QR</p>
+<p>🔳 QR Dinámicos</p>
 <p>👥 Clientes</p>
 <p>📈 Estadísticas</p>
-</div>
-
-<div class="main">
-<h1 style="color:#f5a400">MI QR NEGOCIO v2</h1>
-<div class="grid">
-<div class="card"><h2>500</h2>QR activos</div>
-<div class="card"><h2>128</h2>Clientes</div>
-<div class="card"><h2>15,430</h2>Escaneos</div>
-</div>
-
+</nav>
+<main>
+<h1 style="color:#f5a400">MI QR NEGOCIO v3</h1>
 <div class="card">
-<h2>Crear QR dinámico</h2>
-<p>Cliente: Restaurante La Abuela</p>
+<h2>Nuevo QR dinámico</h2>
 <p>Código: MJN-000001</p>
-<button>Generar QR</button>
+<p>Destino actual: Google Maps</p>
+<button>Crear QR</button>
 </div>
+<div class="card">
+<h2>Base del sistema</h2>
+<p>Preparado para conectar usuarios, clientes y escaneos reales.</p>
 </div>
-</div>
-
-<script>
-function entrar(){
-let u=document.getElementById('user').value;
-let p=document.getElementById('pass').value;
-if(u==="johao" && p==="123456"){
-document.getElementById('login').className="hidden";
-document.getElementById('panel').className="";
-}else alert("Datos incorrectos");
-}
-</script>
+</main>
 </body>
 </html>
