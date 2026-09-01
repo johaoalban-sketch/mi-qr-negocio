@@ -2,26 +2,46 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Mi QR Negocio</title>
+<title>MJM TECH - Mi QR Negocio</title>
 <style>
-body{font-family:Arial;background:#f5f5f5;padding:30px}
-.card{background:white;padding:20px;border-radius:12px;margin:15px 0}
-button{padding:10px;border-radius:8px}
+body{margin:0;font-family:Arial;background:#0b0b0b;color:white}
+.sidebar{position:fixed;width:220px;height:100%;background:#151515;padding:25px}
+.main{margin-left:260px;padding:30px}
+.card{background:#1e1e1e;border-radius:16px;padding:20px;margin:15px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+button{background:#f59e0b;color:#111;border:0;padding:12px 20px;border-radius:10px;font-weight:bold}
+h1{color:#f59e0b}
 </style>
 </head>
 <body>
+<div class="sidebar">
+<h2>MJM TECH</h2>
+<p>Mi QR Negocio</p>
+<hr>
+<p>📊 Dashboard</p>
+<p>🔳 Mis QR</p>
+<p>👥 Clientes</p>
+<p>📈 Estadísticas</p>
+<p>⚙ Configuración</p>
+</div>
+<div class="main">
 <h1>MI QR NEGOCIO</h1>
-<div class="card">
-<h2>Dashboard</h2>
-<p>QR activos: 500</p>
-<p>Clientes: 0</p>
-<p>Escaneos: 0</p>
-<button>Crear QR</button>
+<div class="grid">
+<div class="card"><h2>500</h2>QR activos</div>
+<div class="card"><h2>128</h2>Clientes</div>
+<div class="card"><h2>15,430</h2>Escaneos</div>
 </div>
 <div class="card">
-<h2>Mis QR</h2>
-<p>MJN-000001 | Sin asignar | Activo</p>
-<p>MJN-000002 | Sin asignar | Activo</p>
+<h2>Crear nuevo QR dinámico</h2>
+<p>Cliente: Restaurante La Abuela</p>
+<p>Código: MJN-000001</p>
+<button>Generar QR</button>
+</div>
+<div class="card">
+<h2>Últimos QR</h2>
+<p>MJN-000001 | Google Maps | 342 escaneos</p>
+<p>MJN-000002 | TikTok | 120 escaneos</p>
+</div>
 </div>
 </body>
 </html>

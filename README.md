@@ -1,16 +1,2 @@
-# Mi QR Negocio MVP
-
-Panel administrador para gestión de QR dinámicos.
-
-Módulos incluidos:
-- Login administrador (base)
-- Dashboard
-- Gestión de QR
-- Clientes
-- Estadísticas
-
-Siguiente fase:
-- Conectar Supabase
-- Autenticación real
-- Redirecciones dinámicas
-- Escaneos reales
+# MJM TECH - Mi QR Negocio v1
+Panel estilo MJM TECH preparado para evolución a sistema dinámico.
