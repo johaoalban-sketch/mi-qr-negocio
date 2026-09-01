@@ -1,2 +1,1 @@
-# MJM TECH - Mi QR Negocio v1
-Panel estilo MJM TECH preparado para evolución a sistema dinámico.
+MJM TECH Mi QR Negocio v2 - Login base y panel preparado para conexión de base de datos.
