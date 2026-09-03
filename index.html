@@ -24,7 +24,7 @@ button{background:#f5a400;border:0;padding:12px 20px;border-radius:10px}
 <h1 style="color:#f5a400">MI QR NEGOCIO v3</h1>
 <div class="card">
 <h2>Nuevo QR dinámico</h2>
-<p>Código: <span id="codigo">MJN-000001</span></p>
+<p>Código: <span id="codigo"></span></p>
 <p>Destino actual: Sin asignar</p>
 
 <div id="qr"></div>
@@ -38,11 +38,17 @@ button{background:#f5a400;border:0;padding:12px 20px;border-radius:10px}
 </main>
 <script>
 
+let contadorQR = 1;
+
 function crearQR(){
 
-    let codigo = document.getElementById("codigo").innerText;
+    let codigo = "MJN-" + String(contadorQR).padStart(6,"0");
+
+    document.getElementById("codigo").innerText = codigo;
+
 
     let urlQR = "https://miqrnegociomvp.vercel.app/r/" + codigo;
+
 
     document.getElementById("qr").innerHTML =
     `
@@ -53,6 +59,9 @@ function crearQR(){
 
     <p>${urlQR}</p>
     `;
+
+
+    contadorQR++;
 
 }
 
