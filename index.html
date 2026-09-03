@@ -24,8 +24,11 @@ button{background:#f5a400;border:0;padding:12px 20px;border-radius:10px}
 <h1 style="color:#f5a400">MI QR NEGOCIO v3</h1>
 <div class="card">
 <h2>Nuevo QR dinámico</h2>
-<p>Código: MJN-000001</p>
-<p>Destino actual: Google Maps</p>
+<p>Código: <span id="codigo">MJN-000001</span></p>
+<p>Destino actual: Sin asignar</p>
+
+<div id="qr"></div>
+
 <button onclick="crearQR()">Crear QR</button>
 </div>
 <div class="card">
@@ -36,7 +39,21 @@ button{background:#f5a400;border:0;padding:12px 20px;border-radius:10px}
 <script>
 
 function crearQR(){
-alert("QR creado correctamente");
+
+    let codigo = document.getElementById("codigo").innerText;
+
+    let urlQR = "https://miqrnegociomvp.vercel.app/r/" + codigo;
+
+    document.getElementById("qr").innerHTML =
+    `
+    <h3>QR generado</h3>
+
+    <img 
+    src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${urlQR}">
+
+    <p>${urlQR}</p>
+    `;
+
 }
 
 </script> 
