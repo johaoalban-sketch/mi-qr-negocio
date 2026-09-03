@@ -100,6 +100,48 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${urlQR}">
 contadorQR++;
 
 }
+
+// AQUÍ PEGA cargarQR()
+
+
+async function cargarQR(){
+
+const { data, error } = await db
+.from("qr_dinamicos")
+.select("*")
+.order("fecha_creacion",{ascending:false});
+
+
+if(error){
+console.log(error);
+return;
+}
+
+
+let lista = "";
+
+data.forEach(qr => {
+
+lista += `
+<div class="card">
+<h3>${qr.codigo}</h3>
+<p>Destino: ${qr.destino}</p>
+<p>Escaneos: ${qr.escaneos}</p>
+<p>Estado: ${qr.activo ? "Activo" : "Inactivo"}</p>
+</div>
+`;
+
+});
+
+
+document.getElementById("listaQR").innerHTML =
+"<h2>QR Dinámicos</h2>" + lista;
+
+}
+
+
+cargarQR();
+  
 </script> 
 </body>
 </html>
