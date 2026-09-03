@@ -99,6 +99,8 @@ src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${urlQR}">
 
 contadorQR++;
 
+cargarQR();
+
 }
 
 // AQUÍ PEGA cargarQR()
@@ -108,7 +110,8 @@ async function cargarQR(){
 
 const { data, error } = await db
 .from("qr_dinamicos")
-.select("*");
+.select("*")
+.order("fecha_creacion", { ascending:false });
 
 console.log(data);
 console.log(error);
@@ -140,9 +143,6 @@ document.getElementById("listaQR").innerHTML =
 "<h2>QR Dinámicos</h2>" + lista;
 
 }
-
-
-cargarQR();
   
 </script> 
 </body>
