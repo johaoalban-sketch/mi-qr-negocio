@@ -62,7 +62,7 @@ document.getElementById("codigo").innerText = codigo;
 let urlQR = "https://miqrnegociomvp.vercel.app/r/" + codigo;
 
 // GUARDAR QR EN SUPABASE
-await db
+const { data, error } = await db
 .from("qr_dinamicos")
 .insert([
 {
@@ -72,6 +72,12 @@ escaneos: 0,
 activo: true
 }
 ]);
+
+if(error){
+console.log(error);
+alert("Error guardando QR");
+return;
+}  
 
   
 document.getElementById("qr").innerHTML =
