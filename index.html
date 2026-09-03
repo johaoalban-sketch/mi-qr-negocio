@@ -50,11 +50,11 @@ SUPABASE_KEY
 );
 
 
-let contadorQR = 1;
+let contadorQR = Date.now();
 
 async function crearQR(){
-
-let codigo = "MJN-" + String(contadorQR).padStart(6,"0");
+  
+let codigo = "MJN-" + contadorQR;
 
 document.getElementById("codigo").innerText = codigo;
 
