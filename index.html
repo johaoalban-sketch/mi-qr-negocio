@@ -108,8 +108,10 @@ async function cargarQR(){
 
 const { data, error } = await db
 .from("qr_dinamicos")
-.select("*")
-.order("fecha_creacion",{ascending:false});
+.select("*");
+
+console.log(data);
+console.log(error);
 
 
 if(error){
