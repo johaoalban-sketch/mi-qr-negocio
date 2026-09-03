@@ -16,7 +16,7 @@ button{background:#f5a400;border:0;padding:12px 20px;border-radius:10px}
 <h2 style="color:#f5a400">MJM TECH</h2>
 <p>Mi QR Negocio</p>
 <p>📊 Dashboard</p>
-<p>🔳 QR Dinámicos</p>
+<p onclick="mostrarQR()">▣ QR Dinámicos</p>
 <p>👥 Clientes</p>
 <p>📈 Estadísticas</p>
 </nav>
@@ -34,6 +34,10 @@ button{background:#f5a400;border:0;padding:12px 20px;border-radius:10px}
 <div class="card">
 <h2>Base del sistema</h2>
 <p>Preparado para conectar usuarios, clientes y escaneos reales.</p>
+</div>
+<div id="listaQR" class="card">
+<h2>QR Dinámicos</h2>
+<p>Cargando QR...</p>
 </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
